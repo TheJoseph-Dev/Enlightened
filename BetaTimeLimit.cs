@@ -33,6 +33,8 @@ public class BetaTimeLimit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Disabled after the event
+        /*
         if (ended)
         {
             CreditsUI();
@@ -56,6 +58,7 @@ public class BetaTimeLimit : MonoBehaviour
         if(BetaTime.currentTime >= BetaTime.endTime) ended = true;
 
         //print((BetaTime.currentTime / 60).ToString() + " min");
+        */
 
     }
 

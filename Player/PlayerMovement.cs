@@ -296,6 +296,17 @@ public class PlayerMovement : MonoBehaviour
                     Levitation(Vector3.up);
 
                     return true;
+
+
+                case InteractionType.RootCutscene:
+
+                    if (!hasHandledOnce)
+                    {
+                        playerState.swapable = false;
+                    }
+
+
+                    return true;
             }
         }
         else

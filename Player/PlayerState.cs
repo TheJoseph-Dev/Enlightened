@@ -76,7 +76,8 @@ public class PlayerState : MonoBehaviour
 
         float fill = activated.materialForRendering.GetFloat("_Fill");
         deactivated.materialForRendering.SetFloat("_Fill", fill);
-        activated.materialForRendering.SetFloat("_Fill", 1);
+
+        if (isParticle) activated.materialForRendering.SetFloat("_Fill", 0);
     }
 
     private bool isEffectActive = false;
@@ -125,6 +126,15 @@ public class PlayerState : MonoBehaviour
             {
                 float newValue = fill + (Time.deltaTime * 0.15f);
                 deactivated.materialForRendering.SetFloat("_Fill", newValue);
+            }
+
+
+            fill = activated.materialForRendering.GetFloat("_Fill");
+
+            if (fill < 1)
+            {
+                float newValue = fill + (Time.deltaTime * 0.3f);
+                activated.materialForRendering.SetFloat("_Fill", newValue);
             }
         }
     }

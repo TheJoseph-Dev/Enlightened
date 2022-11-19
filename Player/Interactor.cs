@@ -9,7 +9,8 @@ public enum InteractionType
     EnergyModule = 1,
     Plaque = 2,
     PortalCutscene = 3,
-    JulioShed = 4
+    JulioShed = 4,
+    RootCutscene = 5
 }
 
 public struct InteractionData
